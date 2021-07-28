@@ -1,0 +1,44 @@
+.banner {
+  padding: 1rem;
+}
+
+.banner p {
+  color: var(--color-1);
+  /* padding: 1rem 2rem; */
+  line-height: 160%;
+}
+
+.banner img {
+  max-width: 100%;
+  margin: 2rem 0;
+}
+
+@media screen and (max-width: 768px) {
+  .banner {
+    text-align: center;
+  }
+  .banner p {
+    padding: 1rem 2rem;
+  }
+  .banner .btn {
+    margin: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .banner {
+    padding: 1rem 7vw;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+  }
+  .banner p {
+    margin: 2rem 0;
+    width: 70%;
+  }
+  .banner .h1 {
+    width: fit-content;
+  }
+
+  .banner img {
+    transform: scale(1.2);
+  }
+}

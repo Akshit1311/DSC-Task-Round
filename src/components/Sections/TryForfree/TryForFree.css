@@ -1,0 +1,46 @@
+.tryForFree {
+  position: relative;
+  margin: 7vw 0;
+  padding: 5vh 7vw;
+  display: flex;
+  border-top: 2px solid rgba(172, 172, 172, 0.555);
+  justify-content: space-between;
+}
+
+.tryForFree p {
+  color: var(--color-1);
+  font-size: 1.125rem;
+}
+
+.tryForFree__right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  align-items: center;
+}
+
+.tryForFree__right .btn {
+  height: fit-content;
+  min-width: 125px;
+  text-align: center;
+}
+
+.tryForFree__right .btn svg {
+  margin-left: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .tryForFree {
+    flex-direction: column;
+  }
+
+  .tryForFree__right {
+    display: flex;
+  }
+
+  .tryForFree__right .btn {
+    min-width: 0;
+    display: flex;
+    width: fit-content;
+  }
+}
