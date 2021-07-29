@@ -39,9 +39,3 @@
   line-height: 180%;
   color: var(--color-1);
 }
-
-@media screen and (max-width: 768px) {
-  .testCard {
-    padding: 3.75rem 4.375rem;
-  }
-}

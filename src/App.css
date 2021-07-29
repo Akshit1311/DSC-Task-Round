@@ -54,6 +54,11 @@ code {
   color: white;
 }
 
+.rot-180 {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
 @media screen and (max-width: 768px) {
   :root {
     font-size: 14px;

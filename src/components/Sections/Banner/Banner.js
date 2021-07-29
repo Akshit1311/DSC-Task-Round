@@ -7,9 +7,9 @@ import "./Banner.css";
 //assets
 import BannerImg from "../../../assets/Banner.png";
 
-const Banner = () => {
+const Banner = ({ aboutRef }) => {
   return (
-    <div className="banner">
+    <div ref={aboutRef} className="banner">
       <div className="banner__left">
         <div className="h1">Save your data storage here.</div>
         <p>

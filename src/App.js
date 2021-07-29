@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef } from "react";
 import "./App.css";
 import Banner from "./components/Sections/Banner/Banner";
 import Navbar from "./components/Navbar/Navbar";
@@ -9,16 +9,27 @@ import TryForFree from "./components/Sections/TryForfree/TryForFree";
 import Footer from "./components/Footer/Footer";
 
 function App() {
-  const [activeSection, setActiveSection] = useState("About");
+  const activeSection = "About";
+
+  const aboutRef = useRef(null);
+  const helpRef = useRef(null);
+  const featRef = useRef(null);
+  const signUpRef = useRef(null);
 
   return (
     <div className="App">
-      <Navbar activeSection={activeSection} />
-      <Banner />
+      <Navbar
+        activeSection={activeSection}
+        aboutRef={aboutRef}
+        helpRef={helpRef}
+        featRef={featRef}
+        signUpRef={signUpRef}
+      />
+      <Banner aboutRef={aboutRef} />
       <StorageBank />
-      <Features />
-      <Testimonials />
-      <TryForFree />
+      <Features featRef={featRef} />
+      <Testimonials helpRef={helpRef} />
+      <TryForFree signUpRef={signUpRef} />
       <Footer />
     </div>
   );

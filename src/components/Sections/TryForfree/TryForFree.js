@@ -6,9 +6,9 @@ import "./TryForFree.css";
 //Components
 import Button from "../../Button/Button";
 
-const TryForFree = () => {
+const TryForFree = ({ signUpRef }) => {
   return (
-    <div className="tryForFree">
+    <div ref={signUpRef} className="tryForFree">
       <div className="tryForFree__left">
         <h2 className="h2 text-color-2">Try for free!</h2>
         <p>Get limited 1 week free try our features!</p>
@@ -27,16 +27,16 @@ const TryForFree = () => {
             <path
               d="M15 15L21 8L15 1"
               stroke="#9C69E2"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <path
               d="M21 8H1"
               stroke="#9C69E2"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
         </Button>

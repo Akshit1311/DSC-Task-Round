@@ -8,24 +8,27 @@
 
 .testimonials__cards {
   display: flex;
-  overflow: hidden;
+  overflow: scroll;
   position: relative;
+}
+
+.testimonials__cards::-webkit-scrollbar {
+  display: none;
 }
 
 .testimonials__cards__cover {
   display: flex;
 }
 
-.testimonials__cards::after {
+/* .testimonials__cards::after {
   content: "";
   height: 100%;
   width: 1px;
-  /* background: red; */
   position: absolute;
   right: 0;
   box-shadow: 1px 1px 400px 300px white;
   z-index: 2;
-}
+} */
 
 .testimonials__row {
   display: flex;
@@ -54,6 +57,15 @@
   height: 14px;
   width: 14px;
   background: var(--color-4);
+}
+
+.testimonials__arrows {
+  display: flex;
+  align-items: center;
+}
+
+.testimonials__arrows svg {
+  cursor: pointer;
 }
 
 .testimonials__arrows svg:first-child {

@@ -12,7 +12,7 @@ import SecurityCodeImg from "../../../assets/Features/SecurityCode.png";
 //components
 import FeatureBox from "./FeatureBox/FeatureBox";
 
-const Features = () => {
+const Features = ({ featRef }) => {
   const featuresData = {
     "Search Data": {
       img: SearchDataImg,
@@ -41,7 +41,7 @@ const Features = () => {
   };
 
   return (
-    <div className="features">
+    <div ref={featRef} className="features">
       <h2 className="h2 text-color-2">Features</h2>
       <p className="text-color-1">
         Some of the features and advantages that we provide for those of you who

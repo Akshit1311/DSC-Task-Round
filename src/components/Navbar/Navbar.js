@@ -7,22 +7,35 @@ import "./Navbar.css";
 import Logo from "../../logo.svg";
 import Button from "../Button/Button";
 
-const Navbar = ({ activeSection }) => {
-  const links = ["About", "Help", "Features", "Signup"];
+const Navbar = ({ activeSection, aboutRef, helpRef, featRef, signUpRef }) => {
+  const links = [
+    { text: "About", elem: aboutRef, block: "center" },
+    { text: "Help", elem: helpRef, block: "center" },
+    { text: "Features", elem: featRef, block: "start" },
+    { text: "Signup", elem: signUpRef, block: "center" },
+  ];
 
   return (
     <div className="navbar">
       <img src={Logo} alt="logo" />
 
       <div className="navbar__links">
-        {links.map((link, index) => (
+        {links.map(({ text, elem, block }, index) => (
           <div
-            key={link}
+            key={text}
             className={`navbar__link ${
-              activeSection === link ? "navbar__link__active" : ""
+              activeSection === text ? "navbar__link__active" : ""
             } `}
+            onClick={() =>
+              elem &&
+              elem.current.scrollIntoView({
+                behavior: "smooth",
+                block,
+                inline: "nearest",
+              })
+            }
           >
-            {link}
+            {text}
           </div>
         ))}
       </div>
